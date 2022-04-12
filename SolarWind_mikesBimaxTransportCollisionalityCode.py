@@ -200,7 +200,8 @@ T2_par = 2.8*T1_par
 v1 = 0.
 v2 = 10. * 1E3
 nu_12 = 0.
-(nu_v1, nu_T1_par, nu_T1_per) = bimax_transport(q1, q2, m1, m2, n1, n2, T1_per, T2_per, T1_par, T2_par, v1, v2, nu_12=nu_12)
+decimal = 2
+(nu_v1, nu_T1_par, nu_T1_per) = bimax_transport(q1, q2, m1, m2, n1, n2, T1_per, T2_per, T1_par, T2_par, v1, v2, nu_12=nu_12, decimal=decimal)
 
 #stop
 
