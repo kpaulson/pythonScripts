@@ -1,0 +1,28 @@
+githubScripts_python/
+│
+├── config.py                       # Global paths and encounter dates
+│
+├── core_waves/                     # SPACECRAFT-AGNOSTIC: Shared Math & Physics
+│   ├── __init__.py
+│   ├── dsp.py                      # calculate_ffts()
+│   ├── polarization.py             # calculate_polarization() (Means 1972)
+│   ├── poynting.py                 # calculate_poynting()
+│   ├── kinematics.py               # V_ph, Doppler shifts (from waveResonance/physics.py)
+│   ├── resonances.py               # Cyclotron/Landau energies (from waveResonance/physics.py)
+│   └── spice_manager.py            # Generic kernel loader and frame transformations
+│
+├── waveAnalysis/                   # LEVEL 3 PIPELINE: Observational Wave Properties (v1.4)
+│   ├── __init__.py
+│   ├── psp_analysis.py             # EXECUTION: PSP data loaders -> core_waves -> analysis_io
+│   ├── solo_analysis.py            # EXECUTION: Solar Orbiter data loaders (Future)
+│   └── analysis_io.py              # CDF dictionary and variable definitions for v1.4
+│
+├── waveResonance/                  # LEVEL 4 PIPELINE: Plasma Frame Kinematics (v2.3/3.3)
+│   ├── __init__.py
+│   ├── psp_resonance.py            # EXECUTION: (This is your current main.py)
+│   └── resonance_io.py             # CDF dictionary for v2.3/3.3 (from your current data_io.py)
+│
+└── PSP/                            # SPACECRAFT-SPECIFIC: One-off tools and plotters
+    ├── psp_waveAnalysis_plotter.py
+    ├── psp_interactivePlot_generator.py
+    └── spc_tools.py
