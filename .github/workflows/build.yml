@@ -40,7 +40,7 @@ jobs:
 
     - name: Build Executable
       run: |
-        pyinstaller --onefile --noconsole spani_vdfBrowser.py
+        pyinstaller --onefile --noconsole PSP/spani_vdfBrowser.py
 
     - name: Upload Executable Artifact
       uses: actions/upload-artifact@v4
