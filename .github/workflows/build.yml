@@ -28,7 +28,7 @@ jobs:
 
     - name: Build .exe with PyInstaller
       run: |
-        pyinstaller --onefile --noconsole spani_vdfBrowser.py
+        pyinstaller --onefile --noconsole PSP/spani_vdfBrowser.py
         # Note: If spani_vdfBrowser is a command-line tool (not a GUI), remove the '--noconsole' flag.
 
     - name: Upload Executable Artifact
