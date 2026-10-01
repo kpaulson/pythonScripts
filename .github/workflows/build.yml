@@ -17,7 +17,7 @@ jobs:
           - os: windows-latest
             artifact_name: spani_vdfBrowser-Windows
             asset_path: dist/spani_vdfBrowser.exe
-          - os: ubuntu-latest
+          - os: ubuntu-22.04
             artifact_name: spani_vdfBrowser-Linux
             asset_path: dist/spani_vdfBrowser
           - os: macos-latest
@@ -40,7 +40,7 @@ jobs:
 
     - name: Build Executable
       run: |
-        pyinstaller --onefile --noconsole PSP/spani_vdfBrowser.py
+        pyinstaller --onefile --noconsole spani_vdfBrowser.py
 
     - name: Upload Executable Artifact
       uses: actions/upload-artifact@v4
